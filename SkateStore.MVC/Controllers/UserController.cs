@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace SkateStore.MVC.Controllers
 {
-    public class LongboardController : ApiController
+    public class UserController : ApiController
     {
     }
 }

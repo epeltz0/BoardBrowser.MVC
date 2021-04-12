@@ -13,10 +13,10 @@ namespace SkateStore.Data
         [Required]
         public int UserId { get; set; }
         [Required]
-        [Display(Name = "Full Name")]
+        [Display(Name = "Name")]
         public string Name { get; set; }
-        [Required]
-        public string Email { get; set; }
+        [Display(Name = "Age")]
+        public int Age { get; set; }
         public virtual ICollection<Transactions> Transactions { get; set; }
         public virtual ICollection<Ratings> Ratings{ get; set; }
 

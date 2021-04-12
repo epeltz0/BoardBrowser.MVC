@@ -32,7 +32,7 @@ namespace SkateStore.Data
             return new ApplicationDbContext();
         }
 
-        public DbSet<Boards> Boardsoards { get; set; }
+        public DbSet<Boards> Boards { get; set; }
         public DbSet<Accessories> Accessories { get; set; }
         public DbSet<Transactions> Transactions { get; set; }
         public DbSet<Users> Accounts { get; set; }
