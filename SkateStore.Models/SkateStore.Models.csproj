@@ -54,6 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoardCreate.cs" />
+    <Compile Include="BoardDetail.cs" />
+    <Compile Include="BoardEdit.cs" />
+    <Compile Include="BoardListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

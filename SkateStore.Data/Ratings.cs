@@ -19,7 +19,7 @@ namespace SkateStore.Data
         public int AccessoryId { get; set; }
         [ForeignKey("User Id")]
         [Required]
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
         [Required]
         [Range(1, 5, ErrorMessage = "Value must be between 1 and 5")]
         public int DurablityRating { get; set; }

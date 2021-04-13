@@ -11,7 +11,7 @@ namespace SkateStore.Data
     {
         [Key]
         [Required]
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
         [Required]
         [Display(Name = "Name")]
         public string Name { get; set; }

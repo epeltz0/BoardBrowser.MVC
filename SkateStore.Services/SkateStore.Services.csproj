@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoardService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SkateStore.Data\SkateStore.Data.csproj">
+      <Project>{ECEF4199-F7B0-4887-BB21-0E4609E04680}</Project>
+      <Name>SkateStore.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkateStore.Models\SkateStore.Models.csproj">
+      <Project>{ACDD7877-171B-4800-988A-340EBD226DC6}</Project>
+      <Name>SkateStore.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

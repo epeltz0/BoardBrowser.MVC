@@ -1,0 +1,112 @@
+﻿using SkateStore.Data;
+using SkateStore.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SkateStore.Services
+{
+    public class BoardService
+    {
+        private readonly Guid _userId;
+
+        public BoardService(Guid userId)
+        {
+            _userId = userId;
+        }
+
+        public bool CreateBoard(BoardCreate model)
+        {
+            var entity =
+                new Boards()
+                {
+                    UserId = _userId,
+                    TypeOfBoard = model.TypeOfBoard,
+                    Name = model.Name,
+                    Description = model.Description,
+                    Price = model.Price,
+
+                };
+
+            using (var ctx = new ApplicationDbContext())
+            {
+                ctx.Boards.Add(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public IEnumerable<BoardListItem> GetBoards()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Boards
+                        .Where(e => e.UserId == _userId)
+                        .Select(
+                            e =>
+                                new BoardListItem
+                                {
+                                    BoardId = e.BoardId,
+                                    TypeOfBoard = e.TypeOfBoard,
+                                    Name = e.Name,
+                                    Description = e.Description,
+                                    Price = e.Price,
+                                }
+                        );
+
+                return query.ToArray();
+            }
+        }
+
+
+        public BoardDetail GetBoardById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Boards
+                        .Single(e => e.BoardId == id && e.UserId == _userId);
+                return
+                    new BoardDetail
+                    {
+                        
+                    };
+            }
+        }
+
+        public bool UpdateBoard(BoardEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Boards
+                        .Single(e => e.BoardId == model.BoardId && e.UserId == _userId);
+
+                
+
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteBoard(int boardId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Boards
+                        .Single(e => e.BoardId == boardId && e.UserId == _userId);
+
+                ctx.Boards.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+    }
+}

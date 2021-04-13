@@ -28,7 +28,6 @@ namespace SkateStore.Data
         [Display(Name = "Favorited")]
         public bool IsFavorite { get; set; }
 
-        public virtual ICollection<Transactions> Transactions { get; set; }
         public virtual ICollection<Ratings> Ratings { get; set; }
     }
 }
