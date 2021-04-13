@@ -73,7 +73,11 @@ namespace SkateStore.Services
                 return
                     new BoardDetail
                     {
-                        
+                        BoardId = entity.BoardId,
+                        TypeOfBoard = entity.TypeOfBoard,
+                        Name = entity.Name,
+                        Description = entity.Description,
+                        Price = entity.Price,
                     };
             }
         }

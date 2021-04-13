@@ -55,7 +55,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accessories.cs" />
     <Compile Include="Ratings.cs" />
     <Compile Include="Users.cs" />
     <Compile Include="IdentityModels.cs" />
