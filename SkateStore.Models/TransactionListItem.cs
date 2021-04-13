@@ -8,6 +8,6 @@ namespace SkateStore.Models
 {
     public class TransactionListItem
     {
-        public int ProductId { get; set; }
+        public int BoardId { get; set; }
     }
 }

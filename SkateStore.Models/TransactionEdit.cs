@@ -8,6 +8,7 @@ namespace SkateStore.Models
 {
     public class TransactionEdit
     {
-        public int ProductId { get; set; }
+        public int TransactionId { get; set; }
+        public int BoardId { get; set; }
     }
 }

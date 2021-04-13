@@ -23,6 +23,11 @@ namespace SkateStore.Services
                 new Ratings()
                 {
                     UserId = _userId,
+                    BoardId = model.BoardId,
+                    AffordabilityRating = model.AffordabilityRating,
+                    DurablityRating = model.DurablityRating,
+                    SpeedRating = model.SpeedRating,
+                    Comment = model.Comment
 
 
                 };
@@ -46,6 +51,11 @@ namespace SkateStore.Services
                             e =>
                                 new RatingListItem
                                 {
+                                    BoardId = e.BoardId,
+                                    AffordabilityRating = e.AffordabilityRating,
+                                    DurablityRating = e.DurablityRating,
+                                    SpeedRating = e.SpeedRating,
+                                    Comment = e.Comment
 
                                 }
                         );
@@ -66,7 +76,11 @@ namespace SkateStore.Services
                 return
                     new RatingDetail
                     {
-
+                        BoardId = entity.BoardId,
+                        AffordabilityRating = entity.AffordabilityRating,
+                        DurablityRating = entity.DurablityRating,
+                        SpeedRating = entity.SpeedRating,
+                        Comment = entity.Comment
                     };
             }
         }

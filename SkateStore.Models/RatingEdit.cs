@@ -10,7 +10,7 @@ namespace SkateStore.Models
     public class RatingEdit
     {
         public int RatingId { get; set; }
-        public int ProductId { get; set; }
+        public int BoardId { get; set; }
         [Required]
         [Range(1, 5, ErrorMessage = "Value must be between 1 and 5")]
         public int DurablityRating { get; set; }
