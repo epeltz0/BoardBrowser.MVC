@@ -12,7 +12,7 @@ using System.Web.Mvc;
 namespace SkateStore.MVC.Controllers
 {
     [System.Web.Http.Authorize]
-    public class RatingController : ApiController
+    public class RatingController : Controller
     {
         public ActionResult Index()
         {

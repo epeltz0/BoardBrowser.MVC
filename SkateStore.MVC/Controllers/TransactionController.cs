@@ -12,7 +12,7 @@ using System.Web.Mvc;
 namespace SkateStore.MVC.Controllers
 {
     [System.Web.Http.Authorize]
-    public class TransactionController : ApiController
+    public class TransactionController : Controller
     {
         public ActionResult Index()
         {
@@ -122,4 +122,5 @@ namespace SkateStore.MVC.Controllers
         }
     }
 }
+
 
