@@ -15,7 +15,7 @@ namespace SkateStore.MVC.Controllers
         [System.Web.Http.Authorize]
         public class BoardController : Controller
         {
-            // GET: Note
+            
             public ActionResult Index()
             {
                 var userId = Guid.Parse(User.Identity.GetUserId());
