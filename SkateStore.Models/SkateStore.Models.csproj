@@ -59,6 +59,14 @@
     <Compile Include="BoardEdit.cs" />
     <Compile Include="BoardListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RatingCreate.cs" />
+    <Compile Include="RatingDetail.cs" />
+    <Compile Include="RatingEdit.cs" />
+    <Compile Include="RatingListItem.cs" />
+    <Compile Include="TransactionCreate.cs" />
+    <Compile Include="TransactionDetail.cs" />
+    <Compile Include="TransactionEdit.cs" />
+    <Compile Include="TransactionListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

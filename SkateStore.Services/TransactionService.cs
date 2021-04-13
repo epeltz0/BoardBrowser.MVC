@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SkateStore.Services
 {
-    class TransactionService
+    public class TransactionService
     {
     }
 }

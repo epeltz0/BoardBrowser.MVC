@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SkateStore.Models
 {
-    class TransactionEdit
+    public class TransactionEdit
     {
+        public int ProductId { get; set; }
     }
 }

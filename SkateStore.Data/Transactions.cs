@@ -17,7 +17,7 @@ namespace SkateStore.Data
         public Guid UserId { get; set; }
         [ForeignKey("Board")]
         public int ProductId { get; set; }
-        [ForeignKey("Accessory")]
-        public int AccessoryId { get; set; }
+        
+        
     }
 }
