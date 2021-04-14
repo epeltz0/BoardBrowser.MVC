@@ -13,7 +13,7 @@ namespace SkateStore.MVC.Controllers
 {
    
         [System.Web.Http.Authorize]
-        public class BoardController : Controller
+        public class BoardsController : Controller
         {
             
             public ActionResult Index()

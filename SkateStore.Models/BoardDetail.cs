@@ -10,6 +10,7 @@ namespace SkateStore.Models
     public class BoardDetail
     {
         [Required]
+        [Key]
         public int BoardId { get; set; }
         [Required]
         [Display(Name = "Type of Board")]
