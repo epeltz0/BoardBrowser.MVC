@@ -22,7 +22,7 @@ namespace SkateStore.Services
             var entity =
                 new Ratings()
                 {
-                    UserId = _userId,
+                    
                     BoardId = model.BoardId,
                     AffordabilityRating = model.AffordabilityRating,
                     DurablityRating = model.DurablityRating,
@@ -46,7 +46,6 @@ namespace SkateStore.Services
                 var query =
                     ctx
                         .Ratings
-                        .Where(e => e.UserId == _userId)
                         .Select(
                             e =>
                                 new RatingListItem
@@ -72,7 +71,7 @@ namespace SkateStore.Services
                 var entity =
                     ctx
                         .Ratings
-                        .Single(e => e.RatingId == id && e.UserId == _userId);
+                        .Single(e => e.RatingId == id);
                 return
                     new RatingDetail
                     {
@@ -93,7 +92,7 @@ namespace SkateStore.Services
                 var entity =
                     ctx
                         .Ratings
-                        .Single(e => e.RatingId == model.RatingId && e.UserId == _userId);
+                        .Single(e => e.RatingId == model.RatingId);
 
 
 
@@ -109,7 +108,7 @@ namespace SkateStore.Services
                 var entity =
                     ctx
                         .Ratings
-                        .Single(e => e.RatingId == ratingId && e.UserId == _userId);
+                        .Single(e => e.RatingId == ratingId);
 
                 ctx.Ratings.Remove(entity);
 

@@ -22,7 +22,7 @@ namespace SkateStore.Services
             var entity =
                 new Transactions()
                 {
-                    UserId = _userId,
+                    
                     BoardId = model.BoardId
 
                 };
@@ -41,7 +41,6 @@ namespace SkateStore.Services
                 var query =
                     ctx
                         .Transactions
-                        .Where(e => e.UserId == _userId)
                         .Select(
                             e =>
                                 new TransactionListItem
@@ -62,7 +61,7 @@ namespace SkateStore.Services
                 var entity =
                     ctx
                         .Transactions
-                        .Single(e => e.TransactionId == id && e.UserId == _userId);
+                        .Single(e => e.TransactionId == id);
                 return
                     new TransactionDetail
                     {
@@ -79,7 +78,7 @@ namespace SkateStore.Services
                 var entity =
                     ctx
                         .Transactions
-                        .Single(e => e.TransactionId == model.TransactionId && e.UserId == _userId);
+                        .Single(e => e.TransactionId == model.TransactionId);
 
 
 
@@ -95,7 +94,7 @@ namespace SkateStore.Services
                 var entity =
                     ctx
                         .Transactions
-                        .Single(e => e.TransactionId == transactionId && e.UserId == _userId);
+                        .Single(e => e.TransactionId == transactionId);
 
                 ctx.Transactions.Remove(entity);
 

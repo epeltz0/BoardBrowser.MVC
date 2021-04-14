@@ -22,7 +22,7 @@ namespace SkateStore.Services
             var entity =
                 new Boards()
                 {
-                    UserId = _userId,
+                   
                     TypeOfBoard = model.TypeOfBoard,
                     Name = model.Name,
                     Description = model.Description,
@@ -44,7 +44,6 @@ namespace SkateStore.Services
                 var query =
                     ctx
                         .Boards
-                        .Where(e => e.UserId == _userId)
                         .Select(
                             e =>
                                 new BoardListItem
@@ -69,7 +68,7 @@ namespace SkateStore.Services
                 var entity =
                     ctx
                         .Boards
-                        .Single(e => e.BoardId == id && e.UserId == _userId);
+                        .Single(e => e.BoardId == id);
                 return
                     new BoardDetail
                     {
@@ -89,7 +88,7 @@ namespace SkateStore.Services
                 var entity =
                     ctx
                         .Boards
-                        .Single(e => e.BoardId == model.BoardId && e.UserId == _userId);
+                        .Single(e => e.BoardId == model.BoardId);
 
                 
 
@@ -105,7 +104,7 @@ namespace SkateStore.Services
                 var entity =
                     ctx
                         .Boards
-                        .Single(e => e.BoardId == boardId && e.UserId == _userId);
+                        .Single(e => e.BoardId == boardId);
 
                 ctx.Boards.Remove(entity);
 

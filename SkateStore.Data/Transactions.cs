@@ -13,10 +13,6 @@ namespace SkateStore.Data
         [Required]
         public int TransactionId { get; set; }
         
-        [ForeignKey("Customer")]
-        [Required]
-        public Guid UserId { get; set; }
-        
         [ForeignKey("Board")]
         public int BoardId { get; set; }
         

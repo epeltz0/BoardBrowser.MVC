@@ -16,10 +16,6 @@ namespace SkateStore.Data
         
         [ForeignKey("Board Id")]
         public int BoardId { get; set; }
-     
-        [ForeignKey("User Id")]
-        [Required]
-        public Guid UserId { get; set; }
        
         [Required]
         [Range(1, 5, ErrorMessage = "Value must be between 1 and 5")]

@@ -29,13 +29,9 @@ namespace SkateStore.Data
         public decimal Price { get; set; }
         public int Rating { get; set; }
         
-        [Display(Name = "Favorited")]
-        [DefaultValue(false)]
-        public bool IsFavorite { get; set; }
+     
         
-        [Required]
-        [ForeignKey("User Id")]
-        public Guid UserId { get; set; }
+       
      
         public virtual ICollection<Ratings> Ratings { get; set; }
     }
