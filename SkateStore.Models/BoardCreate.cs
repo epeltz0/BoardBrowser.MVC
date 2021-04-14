@@ -10,15 +10,15 @@ namespace SkateStore.Models
 {
     public class BoardCreate
     {
-        [Required]
+        
         [Display(Name = "Type of Board")]
         public string TypeOfBoard { get; set; }
-        [Required]
+       
         [Display(Name = "Product Name")]
         public string Name { get; set; }
-        [Required]
+       
         public string Description { get; set; }
-        [Required]
+      
         public decimal Price { get; set; }
         
 

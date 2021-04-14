@@ -13,20 +13,26 @@ namespace SkateStore.Data
         [Key]
         [Required]
         public int BoardId { get; set; }
+        
         [Required]
         [Display(Name ="Type of Board")]
         public string TypeOfBoard { get; set; }
+        
         [Required]
         [Display(Name = "Product Name")]
         public string Name { get; set; }
+        
         [Required]
         public string Description { get; set; }
+        
         [Required]
         public decimal Price { get; set; }
         public int Rating { get; set; }
+        
         [Display(Name = "Favorited")]
         [DefaultValue(false)]
         public bool IsFavorite { get; set; }
+        
         [Required]
         [ForeignKey("User Id")]
         public Guid UserId { get; set; }

@@ -13,18 +13,22 @@ namespace SkateStore.Data
         [Key]
         [Required]
         public int RatingId { get; set; }
+        
         [ForeignKey("Board Id")]
         public int BoardId { get; set; }
      
         [ForeignKey("User Id")]
         [Required]
         public Guid UserId { get; set; }
+       
         [Required]
         [Range(1, 5, ErrorMessage = "Value must be between 1 and 5")]
         public int DurablityRating { get; set; }
+        
         [Required]
         [Range(1, 5, ErrorMessage = "Value must be between 1 and 5")]
         public int AffordabilityRating { get; set; }
+        
         [Required]
         [Range(1, 5, ErrorMessage = "Value must be between 1 and 5")]
         public int SpeedRating { get; set; }

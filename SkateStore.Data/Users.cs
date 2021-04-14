@@ -12,9 +12,11 @@ namespace SkateStore.Data
         [Key]
         [Required]
         public Guid UserId { get; set; }
+       
         [Required]
         [Display(Name = "Name")]
         public string Name { get; set; }
+        
         [Display(Name = "Age")]
         public int Age { get; set; }
         public virtual ICollection<Transactions> Transactions { get; set; }

@@ -359,7 +359,6 @@
     <Content Include="Views\Boards\Create.cshtml" />
     <Content Include="Views\Ratings\Index.cshtml" />
     <Content Include="Views\Transactions\Index.cshtml" />
-    <Content Include="Views\Boards\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

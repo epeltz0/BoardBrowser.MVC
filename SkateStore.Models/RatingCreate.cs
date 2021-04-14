@@ -10,13 +10,13 @@ namespace SkateStore.Models
     public class RatingCreate
     {
         public int BoardId { get; set; }
-        [Required]
+        
         [Range(1, 5, ErrorMessage = "Value must be between 1 and 5")]
         public int DurablityRating { get; set; }
-        [Required]
+        
         [Range(1, 5, ErrorMessage = "Value must be between 1 and 5")]
         public int AffordabilityRating { get; set; }
-        [Required]
+        
         [Range(1, 5, ErrorMessage = "Value must be between 1 and 5")]
         public int SpeedRating { get; set; }
 
