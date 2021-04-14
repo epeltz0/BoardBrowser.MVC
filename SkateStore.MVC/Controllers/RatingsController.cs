@@ -4,15 +4,12 @@ using SkateStore.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+using System.Web;
 using System.Web.Mvc;
 
 namespace SkateStore.MVC.Controllers
 {
-    [System.Web.Http.Authorize]
-    public class RatingController : Controller
+    public class RatingsController : Controller
     {
         public ActionResult Index()
         {
@@ -69,7 +66,7 @@ namespace SkateStore.MVC.Controllers
             var model =
                 new RatingEdit
                 {
-                    
+
                 };
             return View(model);
         }

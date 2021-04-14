@@ -28,10 +28,6 @@ namespace SkateStore.Data
         [Required]
         public decimal Price { get; set; }
         public int Rating { get; set; }
-        
-     
-        
-       
      
         public virtual ICollection<Ratings> Ratings { get; set; }
     }
